@@ -15,45 +15,53 @@ const columns = [
     title: 'Vehicle ID',
     dataIndex: 'id',
     sorter: (a, b) => a.id - b.id,
+    align: 'center',
   },
   {
     title: 'Type',
     dataIndex: 'type',
     sorter: (a, b) => a.type.length - b.type.length,
+    align: 'center',
   },
   {
     title: 'Lock/Unlock',
     dataIndex: 'islocked',
     sorter: (a, b) => a.islocked - b.islocked,
+    align: 'center',
     render: (val)=> <React.Fragment>{val ? 'Lock':'Unlock'}</React.Fragment>
   },
   {
     title: 'Current Speed',
     dataIndex: 'speed',
     sorter: (a, b) => a.speed - b.speed,
+    align: 'center',
     render: (val)=> <React.Fragment>{val + " km/h"}</React.Fragment>
   },
   {
     title: 'Battery level',
     dataIndex: 'batterylvl',
-    sorter: (a, b) => a.battery - b.battery,
+    sorter: (a, b) => a.batterylvl - b.batterylvl,
+    align: 'center',
     render: (val)=> <React.Fragment>{val + "%"}</React.Fragment>
   },
   {
     title: 'Status',
     dataIndex: 'status',
+    align: 'center',
     sorter: (a, b)=> a.status.length - b.status.length,
   },
   {
     title: 'Location',
     dataIndex: 'location',
     sorter: (a, b) => a.location - b.location,
+    align: 'center',
     render: (val)=> <React.Fragment>{ val.toString().slice(0, 5) + "," + val.toString().slice(5) }</React.Fragment>
   },
   {
     title: 'Last Updated',
     dataIndex: 'lastupdated',
     sorter: (a, b)=> new Date(moment(a.lastupdated)) - new Date(moment(b.lastupdated)),
+    align: 'center',
     render: (val)=> {  
       const fullDate =   new Date(moment(val))
       const date = fullDate.toLocaleDateString('fr-CA', {timezone: 'MY'}) 
