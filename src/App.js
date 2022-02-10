@@ -1,5 +1,4 @@
 import VehicleManagement from "./pages/VehicleManagement";
-import "./App.less";
 import { useEffect, useState } from "react";
 
 function App() {
