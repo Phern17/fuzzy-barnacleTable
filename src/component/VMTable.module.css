@@ -36,6 +36,10 @@
 }
 
 @media screen and (max-width: 640px) {
+    .btn {
+        align-self: center;
+    }
+
     .table {
         overflow-x: scroll;
     }
